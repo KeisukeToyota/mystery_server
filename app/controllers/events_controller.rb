@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.select(:id, :title, :description)
+    @event = Event.select(:id, :title, :description).find(params[:id])
 
     render json: @event
   end
