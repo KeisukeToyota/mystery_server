@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_09_041320) do
+ActiveRecord::Schema.define(version: 2019_03_09_061035) do
 
   create_table "events", force: :cascade do |t|
     t.string "title", null: false
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_03_09_041320) do
     t.text "message", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "recent_point_id"
     t.index ["event_id"], name: "index_points_on_event_id"
   end
 
