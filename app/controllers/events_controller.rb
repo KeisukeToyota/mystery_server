@@ -1,12 +1,12 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    @events = Event.select(:id, :title)
 
     render json: @events
   end
 
   def show
-    @event = Event.find(params[:id])
+    @event = Event.select(:id, :title, :description)
 
     render json: @event
   end
